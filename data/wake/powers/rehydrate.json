@@ -1,0 +1,22 @@
+{
+  "type":"origins:action_over_time",
+  "interval": 2,
+  "condition":{
+	  "type": "origins:or",
+	  "conditions":[
+	  {
+         "type": "origins:in_rain"
+	  },
+	  {
+		  "type": "origins:submerged_in",
+		  "fluid": "minecraft:water"
+	  }
+	]
+  },
+  "entity_action": {
+    "type": "origins:change_resource",
+    "resource": "wake:hydration",
+    "change": 200
+  },
+ "hidden":true
+}

@@ -1,0 +1,22 @@
+{
+	"type": "origins:action_over_time",
+	"condition": {
+		"type": "origins:submerged_in",
+		"inverted": false,
+		"fluid": "water"
+	},
+	"interval": 5,
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+
+			"effect": "minecraft:water_breathing",
+			"duration": 200,
+			"is_ambient": false,
+			"show_particles": false,
+			"show_icon": false
+		}
+	},
+	"name": "Water Breathing",
+	"description": "You are walking wake, being able to breath underwater comes naturally to you."
+}

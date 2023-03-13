@@ -1,0 +1,30 @@
+{
+	"powers": [
+        "wake:beamp1",
+        "wake:size",
+        "wake:run_on_water",
+        "origins:water_vision",
+        "wake:hydration",
+        "moborigins:rideable_creature",
+        "wake:rehydrate",
+        "wake:water_bottle",
+        "wake:water_breathing",
+        "origins:aqua_affinity",
+        "origins:like_water",
+        "origins:swim_speed",
+        "wake:shorthands",
+        "wake:nearwaterspeed",
+        "wake:nearwateraddspeed",
+        "wake:nearwaterattack",
+        "wake:relics/relics_desc",
+        "wake:relics/brass_ingot",
+        "wake:relics/therium_crystal_shard",
+        "origins:more_exhaustion"
+        
+	],
+	"icon": "minecraft:tube_coral",
+	"order": 10,
+	"impact": 3,
+	"name": "Walking Wake!",
+	"description": "It is not known to evolve into or from any other Pokémon, but it appears to be an ancient relative of Suicune."
+}

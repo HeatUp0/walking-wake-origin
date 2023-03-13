@@ -1,0 +1,27 @@
+{
+	"type": "origins:conditioned_attribute",
+	"modifier": {
+		"name": "Attack decrease",
+		"attribute": "minecraft:generic.attack_damage",
+		"value": -0.5,
+		"operation": "multiply_total"
+	},
+	"condition": {
+		"type": "origins:block_in_radius",
+		"block_condition": {
+			"type": "origins:fluid",
+			"fluid_condition": {
+				"type": "origins:in_tag",
+				"tag": "minecraft:water"
+			}
+		},
+		"radius": 10,
+		"shape": "cube",
+		"comparison": ">=",
+		"compare_to": 1,
+		"inverted": true
+
+
+	},
+	"hidden": true
+}

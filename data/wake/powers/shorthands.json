@@ -1,0 +1,21 @@
+{
+	"name": "Short Limbs",
+	"description": "Because of your theropod nature, your arms arent big enough to properly use shields or bows.",
+	"type": "origins:multiple",
+	"swords_only": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": [{
+				"item": "bow"
+			},
+				{
+					"item": "crossbow"
+				},
+				{
+					"item": "shield"
+				}
+			]
+		}
+	}
+}

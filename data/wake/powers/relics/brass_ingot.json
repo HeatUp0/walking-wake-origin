@@ -1,0 +1,132 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"make_honey_comb": {
+		"type": "origins:item_on_item",
+		"using_item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:copper_ingot"
+			}
+		},
+		"on_item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:gold_ingot"
+			}
+		},
+		"result": {
+			"item": "create:brass_ingot",
+			"tag": "{display:{Name:'[{\"text\":\"Unkown Alloy\",\"italic\":false,\"color\":\"#5CBDDE\"}]',Lore:['[{\"text\":\"A catalyst of energy,\",\"italic\":false}]','[{\"text\":\"unable to be consumed\",\"italic\":false}]','[{\"text\":\"but instead able to be\",\"italic\":false}]','[{\"text\":\"fused with items.\",\"italic\":false}]']},Enchantments:[{}]}"
+		},
+		"using_item_action": {
+			"type": "origins:consume",
+			"amount": 1
+		},
+		"on_item_action": {
+			"type": "origins:consume",
+			"amount": 1
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:enchant ~ ~0.9 ~ 0.5 0.5 0.5 0.5 10 normal"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.enchantment_table.use",
+					"volume": 2,
+					"pitch": 0.6
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 1,
+					"action": {
+						"type": "origins:play_sound",
+						"sound": "minecraft:item.trident.thunder",
+						"volume": 3,
+						"pitch": 0.75
+					}
+				}
+			]
+		}
+	},
+	"tooltip": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:amethyst_shard"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:amethyst_shard"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:amethyst_shard"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:amethyst_shard"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:amethyst_shard"
+					}
+				}
+			]
+		},
+		"text": "§c§oThis item can be infused with the Unkown Alloy."
+	},
+	"prevent": {
+		"type": "origins:prevent_block_selection",
+		"condition": {
+			"type": "origins:or",
+			"conditions": [{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{display:{Name:'[{\"text\":\"Unkown Alloy\",\"italic\":false,\"color\":\"#5CBDDE\"}]',Lore:['[{\"text\":\"A catalyst of energy,\",\"italic\":false}]','[{\"text\":\"unable to be consumed\",\"italic\":false}]','[{\"text\":\"but instead able to be\",\"italic\":false}]','[{\"text\":\"fused with items.\",\"italic\":false}]']},Enchantments:[{}]}"
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{display:{Name:'[{\"text\":\"Unkown Alloy\",\"italic\":false,\"color\":\"#5CBDDE\"}]',Lore:['[{\"text\":\"A catalyst of energy,\",\"italic\":false}]','[{\"text\":\"unable to be consumed\",\"italic\":false}]','[{\"text\":\"but instead able to be\",\"italic\":false}]','[{\"text\":\"fused with items.\",\"italic\":false}]']},Enchantments:[{}]}"
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{display:{Name:'[{\"text\":\"Energy Booster\",\"italic\":false,\"color\":\"#5CDEBD\"}]',Lore:['[{\"text\":\"Engulfs the user\",\"italic\":false}]','[{\"text\":\"in energy, sending\",\"italic\":false}]','[{\"text\":\"them flying in the\",\"italic\":false}]','[{\"text\":\"direction they are\",\"italic\":false}]','[{\"text\":\"looking.\",\"italic\":false}]']},Enchantments:[{}]}"
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{display:{Name:'[{\"text\":\"Energy Booster\",\"italic\":false,\"color\":\"#5CDEBD\"}]',Lore:['[{\"text\":\"Engulfs the user\",\"italic\":false}]','[{\"text\":\"in energy, sending\",\"italic\":false}]','[{\"text\":\"them flying in the\",\"italic\":false}]','[{\"text\":\"direction they are\",\"italic\":false}]','[{\"text\":\"looking.\",\"italic\":false}]']},Enchantments:[{}]}"
+					}
+				}
+			]
+		}
+	}
+}

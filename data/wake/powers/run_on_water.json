@@ -1,0 +1,23 @@
+{
+    "name": "Water Running",
+    "description": "You can run on water!",
+    "type": "origins:walk_on_fluid",
+    "fluid": "minecraft:water",
+    "condition":
+    {
+        "type": "origins:and",
+        "conditions":
+        [
+        {
+            "type": "origins:sneaking",
+            "inverted": true
+        },
+        {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": "<=",
+            "compare_to": 0.4
+        }
+        ]
+    }
+}

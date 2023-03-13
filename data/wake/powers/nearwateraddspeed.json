@@ -1,0 +1,27 @@
+{
+	"type": "origins:conditioned_attribute",
+	"modifier": {
+		"name": "Movement Speed decrease",
+		"attribute": "minecraft:generic.movement_speed",
+		"value": 1.5,
+		"operation": "multiply_base"
+	},
+	"interval": 20,
+	"condition": {
+		"type": "origins:block_in_radius",
+		"block_condition": {
+			"type": "origins:fluid",
+			"fluid_condition": {
+				"type": "origins:in_tag",
+				"tag": "minecraft:water"
+			}
+		},
+		"radius": 5,
+		"shape": "cube",
+		"comparison": ">=",
+		"compare_to": 1
+
+
+	},
+	"hidden": true
+}

@@ -1,0 +1,15 @@
+{
+	"name": "Ancient Infusion",
+	"description": "You can fuse the hydration with certain item, granting them power. Create the Unkown Alloy by right clicking copper ingot atop gold ingot in your inventory.",
+	"badges": [
+		{
+			"sprite": "minecraft:textures/item/copper_ingot.png",
+			"text": "Items that you can infuse will be mostly unkown to current man."
+		},
+		{
+			"sprite": "minecraft:textures/item/barrier.png",
+			"text": "Once items are fused, only Walking Wake can use them."
+		}
+	],
+	"type": "origins:simple"
+}

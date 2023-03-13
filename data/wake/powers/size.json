@@ -1,0 +1,43 @@
+{
+  "name":"Big and Blue!",
+  "description":"You're a massive, at 2 1/2 blocks tall and blue!",
+  "badges": [
+    {
+        "sprite": "origins:textures/gui/badge/info.png",
+        "text": "The color overlay can be toggled off using the Origins quaternary key."
+    }
+],
+"type": "origins:multiple",
+"size": {
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:delay",
+        "ticks": 1,
+        "action": {
+            "type": "origins:execute_command",
+            "command": "function wake:bigg"
+        }
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "scale reset @s"
+    }
+},
+"color":{
+        "type": "origins:model_color",
+        "red": 0.18823529411,
+        "green": 0.85156862745,
+        "blue": 0.95901960784,
+        "condition":{
+            "type": "origins:power_active",
+            "power": "wake:size_color_toggle"
+        }
+},
+"color_toggle":{
+    "type": "origins:toggle",
+    "active_by_default": true,
+    "key": {
+        "key": "key.origins.quaternary_active"
+    }
+}
+}
